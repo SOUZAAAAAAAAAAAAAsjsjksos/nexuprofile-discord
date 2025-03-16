@@ -77,3 +77,59 @@ Acesse seus dados do Discord de forma fácil e rápida.
   },
   "success": true
 }
+```
+
+---
+
+### Obter informações de um servidor  
+
+**Método:** `GET`  
+**URL:** `https://nexussapi-production.up.railway.app/guild/:guildid`  
+
+#### Exemplo de resposta  
+
+```json
+{
+  "data": {
+    "id": "1313726337994723441",
+    "owner_id": "303699181900660737",
+    "creation_date": "2024-12-04T04:39:26.833Z",
+    "on_since": "04 de dezembro de 2024",
+    "name": "/nerdolas",
+    "icon": "https://cdn.discordapp.com/icons/1313726337994723441/9dfb41c9a7f263feb85da4d1186a9c80.png",
+    "banner": "https://cdn.discordapp.com/banners/1313726337994723441/0a9a2bbd38d0c785e3116bf96ffa60ae.png",
+    "boost_count": 24,
+    "boost_level": 3,
+    "community": true,
+    "member_count": 333,
+    "member_online_count": 109,
+    "emoji": "https://cdn3.emoji.gg/emojis/3388-community-server-boosted.png",
+    "country": "pt-BR"
+  },
+  "invite": "https://discord.gg/MBpV2NJF",
+  "success": true
+}
+```
+
+---
+
+## Endpoints adicionais  
+
+- **`/profile/:userid`** - Retorna foto de perfil, nome de usuário e nome de exibição *(Em breve)*.  
+- **`/activity/:userid`** - Retorna informações de Spotify e atividades.  
+- **`/guilds`** - Retorna todos os servidores que o bot faz parte.  
+
+---
+
+## Códigos de erro  
+
+| Código | Descrição |
+|--------|------------|
+| `404`  | Recurso não encontrado (rota, usuário ou servidor). |
+| `500`  | Erro interno no servidor. |
+
+---
+
+## Problemas com imagens de atividades  
+
+Algumas imagens de atividades podem não ser exibidas corretamente devido a limitações da API. Estamos trabalhando para corrigir isso em futuras versões.
